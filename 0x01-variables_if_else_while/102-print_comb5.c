@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i, j, k, l;	
+	int i, j, k, l;
 	
 	i = 0;
 
@@ -31,6 +31,7 @@ int main(void)
 					}
 					else
 					{
+						putchar(' ');
 						putchar(',');
 					}
 				}
