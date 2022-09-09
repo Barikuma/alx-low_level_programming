@@ -10,19 +10,16 @@ int main(void)
 {
 	int i;
 	int r;
+	
+	i = 0;
 
-	for (i = 0 ; i <= 15 ; i++)
+	while (i < 10)
 	{
-		r = i % 16;
-		if (r < 10)
-		{
-			putchar(r + '0');
-		}
-		else
-		{
-			putchar(r + 87);
-		}
-
+		r = i % 10;
+		putchar(r + '0');
+		putchar(',');
+		putchar(' ');
+		i++;
 	}
 	putchar('\n');
 	return (0);
