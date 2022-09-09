@@ -8,11 +8,20 @@
 
 int main(void)
 {
-	int i;
+	int i, r;
 
-	for (i = 0 ; i < 17 ; i++)
+	for (i = 0 ; i <= 15 ; i++)
 	{
-		putchar(i);
+		r = i % 16;
+		if (r < 10)
+		{
+			putchar(r + '0');
+		}
+		else
+		{
+			putchar(r + 87);
+		}
+
 	}
 	putchar('\n');
 	return (0);
