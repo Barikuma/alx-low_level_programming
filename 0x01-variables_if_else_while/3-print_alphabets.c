@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	int i, j;
+	int i;
 
 	for (i = 97 ; i < 123 ; i++)
 	{
@@ -19,4 +19,5 @@ int main(void)
 		putchar(i);
 	}
 	putchar('\n');
+	return (0);
 }
