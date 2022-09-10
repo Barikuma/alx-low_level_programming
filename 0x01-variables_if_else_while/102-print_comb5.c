@@ -14,7 +14,7 @@ int main(void)
 
 	for (a = a ; a <= 98 ; a++)
 	{
-		for (b = a + 1 <= 99 ; b++)
+		for (b = a + 1 ; b <= 99 ; b++)
 		{
 			putchar(a + '0');
 			putchar(' ');
