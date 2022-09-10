@@ -8,35 +8,25 @@
 
 int main(void)
 {
-	int i, j, k, l;
+	int a, b;
 
-	i = 0;
+	a = 0;
 
-	for (i = i ; i < 10 ; i++)
+	for (a = a ; a <= 98 ; a++)
 	{
-		for (j = 0 ; j < 9 ; j++)
+		for (b = a + 1 <= 99 ; b++)
 		{
-			for (k = 0 ; k < 10 ; k++)
+			putchar(a + '0');
+			putchar(' ');
+			putchar(b + '0');
+			if ((a == 98) && (b == 99))
 			{
-				for (l = 0 ; l < 10 ; l++)
-				{
-					if ((i == 0) && (j == 0) && (k == 0) & (l == 0))
-						continue;
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					if ((i == 9) && (j == 8) && (k == 9) && (l == 9))
-					{
-						continue;
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				continue;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
