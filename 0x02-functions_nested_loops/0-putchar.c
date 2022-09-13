@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+/*includes the main.h where _putchar is printed from*/
 #include "main.h"
 
 /**
@@ -9,6 +11,7 @@
 
 int main(void)
 {
+	/*pchar() function from the main.h header file*/
 	pchar();
 	return (0);
 }
