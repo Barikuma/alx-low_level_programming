@@ -1,5 +1,10 @@
 #include <stdio.h>
 /*Function to print alphabets in lowercases using putchar()*/
+void pchar(void)
+{
+	printf("_putchar\n");
+}
+
 void print_alphabet(void)
 {
 	int i;
