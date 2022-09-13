@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /*Function to print alphabets in lowercases using putchar()*/
 void pchar(void)
 {
@@ -44,4 +45,14 @@ void print_alphabet_x10(void)
 		/*increment i by 1*/
 		i++;
 	}
+}
+
+int _islower(int c)
+{
+	/*checks if see is between 97 and 122 (decimal equivalents of alphabets a - z)*/
+	if ((c >= 97) && (c <= 122))
+	{
+		return (1);
+	}
+	return (0);
 }
