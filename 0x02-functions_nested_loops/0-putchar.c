@@ -1,6 +1,3 @@
-#include <stdio.h>
-
-/*includes the main.h where _putchar is printed from*/
 #include "main.h"
 
 /**
@@ -11,7 +8,15 @@
 
 int main(void)
 {
-	/*pchar() function from the main.h header file*/
-	pchar();
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
 	return (0);
 }

@@ -1,10 +1,22 @@
+#include "main.h"
+
 /**
- *empty - empty
+ *print_alphabet_x10 - prints lowercase letters 10 times
  *
  *Return: Always 0 (success)
  */
 
-int empty(void)
+void print_alphabet_x10(void)
 {
-	return (0);
+	int i = 1, j;
+
+	while (i <= 10)
+	{
+		j = 97;
+		while (j <= 122)
+		{
+			_putchar(j);
+		}
+		_putchar('\n');
+	}
 }
