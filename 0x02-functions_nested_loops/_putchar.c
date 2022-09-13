@@ -1,7 +1,11 @@
 #include <stdio.h>
 
-void putch(void)
+/**
+ * an empty file
+ *
+ */
+
+int pg(void)
 {
-	printf("_putchar\n");
-	
+	return (0);
 }
