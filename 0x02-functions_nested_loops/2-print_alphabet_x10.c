@@ -1,7 +1,7 @@
-/*
- * empty - empty function
+/**
+ *empty - empty
  *
- * Return: always 0 (success)
+ *Return: Always 0 (success)
  */
 
 int empty(void)

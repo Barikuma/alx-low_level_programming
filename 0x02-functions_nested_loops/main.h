@@ -21,7 +21,7 @@ void print_alphabet(void)
 
 void print_alphabet_x10(void)
 {
-	int i = 0, j;
+	int i = 1, j;
 
 	/*loop for 10 times*/
 	while (i <= 10)
