@@ -47,6 +47,7 @@ void print_alphabet_x10(void)
 	}
 }
 
+
 int _islower(int c)
 {
 	/*checks if see is between 97 and 122 (decimal equivalents of alphabets a - z)*/
@@ -55,4 +56,9 @@ int _islower(int c)
 		return (1);
 	}
 	return (0);
+}
+
+int _putchar(int x)
+{
+	return putchar(x);
 }
