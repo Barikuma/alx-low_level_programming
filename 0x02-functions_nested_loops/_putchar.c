@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * an empty file
+ *_putchar - an empty file
  *
+ * Return: result
  */
 
-int pg(void)
+int _pchar(int x)
 {
-	return (0);
+	return putchar(x);
 }
