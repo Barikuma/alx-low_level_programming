@@ -1,14 +1,25 @@
 #include <stdio.h>
-#include "main.h"
 
-int _islower(int c);
+int _abs(int);
 
 int main(void){
-	
-	int r;
-	r = 1;
+	_abs(-12);
+	putchar('\n');
+}
 
-	_putchar(r + '0');
-	_putchar('\n');
-	return 0;
+int _abs(int x){
+	if ((x <= 0) && (x > -10)){
+		putchar('0' - x);
+	}
+	else{
+		putchar('0' - x/10);
+		putchar('0' - x%10);
+	}
+	if ((x > 0) && (x < 10)){
+		putchar('0' + x);
+	}
+	else if (x >= 10){
+		putchar('0' + x/10);
+		putchar('0' + x%10);
+	}
 }
