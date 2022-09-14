@@ -2,8 +2,7 @@
 
 /**
  * _islower - returns 1 if char is lowercase and 0 if char is uppercase
- *
- * int c : function parameter
+ * @c: function argument
  *
  * Return: 1 for true and 0 for false
  */
