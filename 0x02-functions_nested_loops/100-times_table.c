@@ -25,12 +25,14 @@ void print_times_table(int n)
 
 				result = i * j;
 
-				if (result <= 9)
+				if (result < 10)
 				{
+					_putchar (' ');
 					_putchar('0' + result);
 				}
-				else if (result > 9 && result < 100)
+				else if (result >= 10 && result < 100)
 				{
+					_putchar(' ');
 					_putchar('0' + result / 10);
 					_putchar('0' + result % 10);
 				}
@@ -38,6 +40,7 @@ void print_times_table(int n)
 				{
 					int r = result % 100;
 
+					_putchar(' ');
 					_putchar('0' + result / 100);
 					_putchar('0' + r / 10);
 					_putchar('0' + r % 10);
