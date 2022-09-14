@@ -9,15 +9,13 @@
 int main(void)
 {
 	int i, f1 = 1, f2 = 0, fnext;
-	f2 += f1;
 
 	for (i = 1 ; i <= 50 ; i++)
 	{
 		fnext = f1 + f2;
-		printf("%d\n", fnext);
-		f1 = f2;
-		f2 = fnext;
+		printf("%d,", fnext);
+		f2 = f1;
+		f1 = fnext;
 	}
-
 	return (0);
 }
