@@ -11,12 +11,13 @@ int main(void)
 	unsigned long f1 = 1, f2 = 0, fnext, sum;
 	int i;
 
-	for (i = 1 ; i <= 50 ; i++)
+	for (i = 1 ; i++)
 	{
 		fnext = f1 + f2;
-		if ((fnext < 4000000) && (fnext % 2 == 0))
+		if ((fnext % 2 == 0))
 		{
-			sum += fnext;
+			if ((sum + fnext) < sizeof(unsigned int))
+				sum += fnext;
 		}
 		f2 = f1;
 		f1 = fnext;
