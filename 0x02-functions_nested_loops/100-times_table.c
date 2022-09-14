@@ -21,12 +21,12 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
 
 				result = i * j;
 
 				if (result <= 9)
 				{
-					_putchar(' ');
 					_putchar('0' + result);
 				}
 				else if (result > 9 && result < 100)
