@@ -9,24 +9,9 @@
 
 int _abs(int x)
 {
-	if ((x <= 0) && (x > -10))
+	if (x >= 0)
 	{
-		_putchar('0' - x);
+		return (x);
 	}
-	else
-	{
-		_putchar('0' - x / 10);
-		_putchar('0' - x % 10);
-	}
-	if ((x > 0) && (x < 10))
-	{
-		_putchar('0' + x);
-	}
-	else
-	{
-		_putchar('0' + x / 10);
-		_putchar('0' + x % 10);
-	}
-	_putchar('\n');
-	return (0);
+	return (x * -1);
 }
