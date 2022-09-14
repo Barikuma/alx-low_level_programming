@@ -16,28 +16,32 @@ void print_times_table(int n)
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
+		_putchar(' ');
 		for (j = 1 ; j <= n ; j++)
 		{
 			result = i * j;
 			if (result < 10)
 			{
 				_putchar(' ');
+				_putchar(' ');
 				_putchar('0' + result);
 			}
 			else if (result >= 10 && result < 100)
 			{
+				_putchar(' ');
+				_putchar(' ');
 				_putchar('0' + result / 10);
 				_putchar('0' + result % 10);
-				_putchar(' ');
 			}
 			else
 			{
 				int r = result % 100;
 
+				_putchar(' ');
+				_putchar(' ');
 				_putchar('0' + result / 100);
 				_putchar('0' + r / 10);
 				_putchar('0' + r % 10);
-				_putchar(' ');
 			}
 			if (j != n)
 			{
