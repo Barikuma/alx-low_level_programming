@@ -11,7 +11,7 @@ int main(void)
 	unsigned long f1 = 1, f2 = 0, fnext, sum;
 	int i;
 
-	for (i = 1 ; i++)
+	for (i = 1 ;; i++)
 	{
 		fnext = f1 + f2;
 		if ((fnext % 2 == 0))
