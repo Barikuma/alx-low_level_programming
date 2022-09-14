@@ -13,7 +13,7 @@ int main(void)
 	for (i = 1 ; i <= 50 ; i++)
 	{
 		fnext = f1 + f2;
-		printf("%d, ", fnext);
+		printf("%lu, ", fnext);
 		f2 = f1;
 		f1 = fnext;
 	}
