@@ -6,6 +6,11 @@
  * Return: void
  */
 
+void hr_and_min_less_than_10(void);
+void hr10_less_min10_greater(void);
+void hr10_greater_min10_less(void);
+void hr10_greater_min10_greater(void);
+
 void jack_bauer(void)
 {
 	int h = 0, m;
