@@ -11,14 +11,11 @@ int main(void)
 	unsigned long f1 = 1, f2 = 0, fnext, sum;
 	int i;
 
-	for (i = 1 ;; i++)
+	while (sum < sizeof(unsigned int))
 	{
 		fnext = f1 + f2;
 		if ((fnext % 2 == 0))
-		{
-			if ((sum + fnext) < sizeof(unsigned int))
-				sum += fnext;
-		}
+			sum += fnext;
 		f2 = f1;
 		f1 = fnext;
 	}
