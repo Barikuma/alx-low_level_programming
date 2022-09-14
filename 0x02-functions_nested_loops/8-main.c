@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	print_to_98(-111);
+	jack_bauer();
 	return 0;
 }
