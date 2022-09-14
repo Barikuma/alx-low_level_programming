@@ -15,8 +15,8 @@ int _abs(int x)
 	}
 	else
 	{
-		_putchar('0' - x/10);
-		_putchar('0' - x%10);
+		_putchar('0' - x / 10);
+		_putchar('0' - x % 10);
 	}
 	if ((x > 0) && (x < 10))
 	{
@@ -24,8 +24,8 @@ int _abs(int x)
 	}
 	else
 	{
-		_putchar('0' + x/10);
-		_putchar('0' + x%10);
+		_putchar('0' + x / 10);
+		_putchar('0' + x % 10);
 	}
 	_putchar('\n');
 	return (0);
