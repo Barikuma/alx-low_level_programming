@@ -19,5 +19,6 @@ int main(void)
 		f2 = f1;
 		f1 = fnext;
 	}
+	putchar('\n');
 	return (0);
 }
