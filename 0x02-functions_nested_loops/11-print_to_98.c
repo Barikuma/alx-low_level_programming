@@ -118,9 +118,21 @@ void negative(int n)
 		}
 		else if (n <= -10)
 		{
-			_putchar('-');
-			_putchar('0' + (n * -1) / 10);
-			_putchar('0' + (n * -1) % 10);
+			if (n > -100)
+			{
+				_putchar('-');
+				_putchar('0' + (n * -1) / 10);
+				_putchar('0' + (n * -1) % 10);
+			}
+			else
+			{
+				int h = n % 100;
+
+				_putchar('-');
+				_putchar('0' + (n * -1) / 100);
+				_putchar('0' + (h * -1) / 10);
+				_putchar('0' + (h * -1) % 10);
+			}
 		}
 		else if (n >= 10)
 		{
