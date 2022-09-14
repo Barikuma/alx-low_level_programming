@@ -20,31 +20,6 @@ void print_times_table(int n)
 			for (j = 1 ; j <= 9 ; j++)
 			{
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-
-				result = i * j;
-
-				if (result < 10)
-				{
-					_putchar (' ');
-					_putchar('0' + result);
-				}
-				else if (result >= 10 && result < 100)
-				{
-					_putchar(' ');
-					_putchar('0' + result / 10);
-					_putchar('0' + result % 10);
-				}
-				else
-				{
-					int r = result % 100;
-
-					_putchar(' ');
-					_putchar('0' + result / 100);
-					_putchar('0' + r / 10);
-					_putchar('0' + r % 10);
-				}
 			}
 			_putchar('\n');
 		}
