@@ -12,7 +12,7 @@ void negative(int n);
 void greater_than_98(int n);
 void starts_from_0(int n);
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
 	if ((n >= 0) && (n <= 98))
 	{
@@ -20,7 +20,7 @@ int print_to_98(int n)
 	}
 	else if (n > 98)
 	{
-		greater_than_98(n)
+		greater_than_98(n);
 	}
 	else
 	{
