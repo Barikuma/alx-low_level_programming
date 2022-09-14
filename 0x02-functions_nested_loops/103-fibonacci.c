@@ -9,8 +9,9 @@
 int main(void)
 {
 	unsigned long f1 = 1, f2 = 0, fnext, sum;
+	int i;
 
-	for (int i = 1 ; i <= 50 ; i++)
+	for (i = 1 ; i <= 50 ; i++)
 	{
 		fnext = f1 + f2;
 		if ((fnext < 4000000) && (fnext % 2 == 0))
