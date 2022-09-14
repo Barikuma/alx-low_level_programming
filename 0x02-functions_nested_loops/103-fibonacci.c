@@ -9,8 +9,7 @@
 int main(void)
 {
 	unsigned long f1 = 1, f2 = 0, fnext, sum;
-	int i;
-
+	
 	while (sum < sizeof(unsigned int))
 	{
 		fnext = f1 + f2;
