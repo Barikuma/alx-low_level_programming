@@ -2,11 +2,17 @@
 
 int main(void)
 {
-	int large;
-	
-	large = largest_number(972, 972, 0);
+	int month, day, year;
 
-	printf("%d\n", large);
+	month = 2;
+	day = 29;
+	year = 2000;
+
+	printf("Date: %02d/%02d/%04d\n", month, day, year);
+
+	day = convert_day(month, day);
+
+	print_remaining_days(month, day, year);
 
 	return 0;
 }
