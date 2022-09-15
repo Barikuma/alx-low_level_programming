@@ -8,13 +8,13 @@
 
 int main(void)
 {
-	unsigned long long f1 = 1, f2 = 0, fnext;
+	unsigned long f1 = 1, f2 = 0, fnext;
 	int i;
 
 	for (i = 1 ; i <= 98 ; i++)
 	{
 		fnext = f1 + f2;
-		printf("%llu", fnext);
+		printf("%lu", fnext);
 		if (i != 98)
 			printf(", ");
 		f2 = f1;
