@@ -33,7 +33,7 @@ void print_times_table(int n)
 					_putchar('0' + result / 10);
 					_putchar('0' + result % 10);
 				}
-				else if (result >= 100)
+				else
 				{
 					_putchar('0' + result / 100);
 					_putchar('0' + (result % 100) / 10);
@@ -44,6 +44,8 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
+					if (result == 0)
+						_putchar(' ');
 				}
 			}
 			_putchar('\n');
