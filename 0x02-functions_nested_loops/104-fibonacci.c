@@ -14,7 +14,7 @@ int main(void)
 	for (i = 0 ; i < 98 ; i++)
 	{
 		fnext = f1 + f2;
-		printf("%lu", fnext);
+		printf("%llu", fnext);
 		if (i != 97)
 		{
 			printf(", ");
