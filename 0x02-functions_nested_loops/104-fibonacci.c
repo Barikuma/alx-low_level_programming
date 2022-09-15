@@ -11,17 +11,15 @@ int main(void)
 	unsigned long long f1 = 1, f2 = 0, fnext;
 	int i;
 
-	for (i = 0 ; i < 98 ; i++)
+	for (i = 1 ; i <= 98 ; i++)
 	{
 		fnext = f1 + f2;
 		printf("%llu", fnext);
-		if (i != 97)
-		{
+		if (i != 98)
 			printf(", ");
-		}
 		f2 = f1;
 		f1 = fnext;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
