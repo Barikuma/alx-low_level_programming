@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 0, fnext, sum;
+	int f1 = 1, f2 = 0, fnext, sum;
 	
-	while (sum < sizeof(unsigned int))
+	while (sum < 4000000)
 	{
 		fnext = f1 + f2;
 		if ((fnext % 2 == 0))
@@ -18,6 +18,6 @@ int main(void)
 		f2 = f1;
 		f1 = fnext;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
