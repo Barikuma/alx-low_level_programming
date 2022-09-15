@@ -9,6 +9,7 @@
 int main(void)
 {
 	int f1 = 1, f2 = 0, fnext, sum;
+
 	while (sum < 4000000)
 	{
 		fnext = f1 + f2;
