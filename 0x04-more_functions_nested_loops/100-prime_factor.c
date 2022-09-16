@@ -2,7 +2,6 @@
 
 /**
  * main - Entry point
- * @Description: prints the largest prime factor of a number
  *
  * Return: 0
  */
