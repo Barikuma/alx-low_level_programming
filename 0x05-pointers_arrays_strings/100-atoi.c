@@ -19,7 +19,7 @@ int _atoi(char *s)
 		if (*s >= '0' && *s <= '9')
 		{
 			nf = 1;
-			t = total * 10 + *s - '0';
+			t = t * 10 + *s - '0';
 		}
 		else if (nf)
 			break;
