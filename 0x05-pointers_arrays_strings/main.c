@@ -4,7 +4,7 @@ int _strlen(char *s);
 
 int main(void)
 {
-	char *s = "Hello, I am Kuma. I wrote this program";
+	char *s = "Hello";
 	_puts(s);
 
 	return 0;
@@ -16,6 +16,8 @@ void _puts(char *s)
 	for ( ; s[i] != '\0' ; i++)
 	{
 	}
+
+	printf("i: %d\n", i);
 	
 	while (i >= 0)
 	{
