@@ -5,15 +5,17 @@ int _strlen(char *s);
 int main(void)
 {
 	char *s = "Hello";
-	int len = _strlen(s);
-	printf("%d\n", len);
+	_puts(s);
 
 	return 0;
 }
 
-int _strlen(char *s)
+void _puts(char *s)
 {
 	int i = 0;
-	for ( ; s[i] != '\0' ; i++);
-	return i;
+	for ( ; s[i] != '\0' ; i++)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
 }
