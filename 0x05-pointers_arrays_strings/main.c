@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	int n = 40;
+	int a = 98, b = 42;
 
-	printf("n = %d\n", n);
-	reset_to_98(&n);
-	printf("n = %d\n", n);
+	printf("a = %d, b = %d\n", a, b);
+	swap_int(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
 
 	return 0;
 }
