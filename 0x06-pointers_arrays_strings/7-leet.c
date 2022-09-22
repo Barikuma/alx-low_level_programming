@@ -16,8 +16,9 @@ char *leet(char *str)
 	{
 		for (j = 0 ; j < 10 ; j++){
 			if (str[i] == c_har[j])
-				str[i++] = c_digits[j];
+				str[i] = c_digits[j];
 		}
+		i++;
 	}
 	return (str);
 }
