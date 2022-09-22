@@ -15,10 +15,12 @@ char *cap_string(char *str)
 	while (i < len)
 	{
 		int j = 0;
-		for (; str[i] == seperators[j]; j++)
+		for (; j < 13 ; j++)
 		{
-			str[i] = str[++i] - 32;
+			if (str[i] == seperators[j])
+				str[i + 1] = str[i + 1] - 32;
 		}
+		i++;
 	}
 	return (str);
 }
