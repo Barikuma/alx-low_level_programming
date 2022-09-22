@@ -12,9 +12,12 @@ char *cap_string(char *str)
 
 	while (i < len)
 	{
-		if (str[i++] == ' ')
+		if (str[i] == ' ' || str[i] == '\t' || str[i] = '\n' || str[i] = ','
+				|| str[i] = ';' || str[i] == '.' || str[i] == '!' || str[i] == '?'
+				|| str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{'
+				|| str[i] == '}')
 		{
-			str[i] = str[i] - 32;
+			str[i] = str[++i] - 32;
 		}
 	}
 	return (str);
