@@ -9,17 +9,15 @@
 char *cap_string(char *str)
 {
 	int len = _strlen(str), i = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}'}
 
 	while (i < len)
 	{
-		if (
-			str[i++] == ' ' || str[i++] == '\t' || str[i++] = '\n' || str[i++] = ','
-			|| str[i++] = ';' || str[i++] == '.' || str[i++] == '!' || str[i++] == '?'
-			|| str[i++] == '"' || str[i++] == '(' || str[i++] == ')' || str[i++] == '{'
-			|| str[i++] == '}'
-				)
+		int j = 0;
+		for (; str[i] == seperators[j]; j++)
 		{
-			str[i] = str[i] - 32;
+			str[i] = str[++i] - 32;
 		}
 	}
 	return (str);
