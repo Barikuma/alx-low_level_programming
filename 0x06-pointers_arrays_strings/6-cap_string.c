@@ -12,12 +12,13 @@ char *cap_string(char *str)
 
 	while (i < len)
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] = '\n' || str[i] = ','
-				|| str[i] = ';' || str[i] == '.' || str[i] == '!' || str[i] == '?'
-				|| str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{'
-				|| str[i] == '}')
+		if (
+			str[i++] == ' ' || str[i++] == '\t' || str[i++] = '\n' || str[i++] = ','
+			|| str[i++] = ';' || str[i++] == '.' || str[i++] == '!' || str[i++] == '?'
+			|| str[i++] == '"' || str[i++] == '(' || str[i++] == ')' || str[i++] == '{'
+			|| str[i++] == '}'
+				)
 		{
-			i++;
 			str[i] = str[i] - 32;
 		}
 	}
