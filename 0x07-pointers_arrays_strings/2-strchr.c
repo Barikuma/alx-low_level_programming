@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 		{
 			for (j = 0 ; j < len && j != '\0' ; j++)
 			{
-				s[j] = (s + i);
+				s[j] = s[i];
 			}
 			return (s);
 		}
