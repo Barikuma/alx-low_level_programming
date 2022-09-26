@@ -15,7 +15,7 @@ unsigned int _strspn(char *s, char *accept)
 	while (accept[a_len] != '\0')
 		a_len++;
 
-	while (a_len > 0)
+	while (s[i] != '\0')
 	{
 
 		for (j = 0 ; j < a_len ; j++)
@@ -27,7 +27,6 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		i++;
-		a_len--;
 	}
 	return (count);
 }
