@@ -1,18 +1,13 @@
 #include <stdio.h>
+#include <string.h>
 
 char *mcpy(char *dest, char *src, int n);
 
 int main(void)
 {
-	char a[] = "abcdefghij";
-	char b[] = {'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y'};
-	int i = 0;
+	char a[] = "sexy not lun";
 
-	while (a[i] != '\0')
-	{
-		i++;
-	}
-	printf("%d\n", i);
+	printf("%ld\n", strspn((a + 9), "ln"));
 
 	return (0);
 }
