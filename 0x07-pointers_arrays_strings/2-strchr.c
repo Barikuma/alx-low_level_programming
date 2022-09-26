@@ -10,19 +10,14 @@
 
 char *_strchr(char *s, char c)
 {
-	int i, j, len = 0;
+	int i, j;
 
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
 
-	for (i = 0 ; i < len ; i++)
+	for (i = 0 ; s[i] != '\0' ; i++)
 	{
 		if (s[i] == c)
 		{
-			for (j = 0 ; j < len && j != '\0' ; j++)
+			for (j = 0 ; j != '\0' ; j++)
 			{
 				s[j] = s[i];
 			}
