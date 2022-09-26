@@ -16,6 +16,8 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		if (straccept(s[i], accept))
 			count++;
+		else
+			break;
 	}
 	return (count);
 }
