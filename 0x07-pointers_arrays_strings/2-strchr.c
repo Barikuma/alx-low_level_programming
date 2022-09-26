@@ -12,10 +12,10 @@ char *_strchr(char *s, char c)
 {
 	int i, j, len = 0;
 
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
 		len++;
-		i++;
+		s++;
 	}
 
 
