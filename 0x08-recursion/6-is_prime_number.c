@@ -19,7 +19,7 @@ int _is_prime(int n)
 {
 	int sum = 0;
 
-	if(n == 0)
+	if((n <= 0) || n == 1)
 	       return (0);
 
 	sum = (n % 10) + _is_prime(n / 10);
