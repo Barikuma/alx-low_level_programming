@@ -3,8 +3,9 @@
 
 int main(void)
 {
-	int n;
-	n = _strlen_recursion("Corbin Coleman");
-	printf("%d\n", n);
+	int r;
+
+	r = _sqrt_recursion(4);
+	printf("%d\n", r);
 	return (0);
 }
