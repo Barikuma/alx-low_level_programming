@@ -32,7 +32,7 @@ int _str_rev(char *s, int len)
 	if (len <= 1)
 		return (1);
 	else if (*s == *(s + len - 1))
-		return (_str_rev(s++, len - 2));
+		return (_str_rev(s + 1, len - 2));
 	return (0);
 }
 
