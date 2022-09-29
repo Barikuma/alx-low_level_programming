@@ -7,12 +7,4 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
-/*
-int _strlen(char *s)
-{
-	int len = 0;
-	while (*(s++) != '\0')
-		len++;
-	return (len);
-}
-*/
+int wildcmp(char *s1, char *s2);
