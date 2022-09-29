@@ -6,30 +6,45 @@
  * Return: 1 if string is a palindrome, otherwise 0
  */
 
-int *_len(char *s);
+int _len(char *s);
+int _str_rev(char *s, int len);
 
 int is_palindrome(char *s)
 {
-	int **len = &_len(s);
-	
-	if (*s == '\0')
-		return (0);
-	**len--;
-	if (*s == *(s + **len))
-	{
-		return (0 + is_palindrome((s + 1)));
-	}
-	return (1);
+	int len;
+
+	len = _len(s);
+
+	if (len <= 1)
+		return (1);
+	return (_str_len(s, len));
 }
 
-int *_len(char *s)
+/**
+ * _str_rev - a function that reverses a string
+ * @s: the string to reverse
+ * @len: the lenght of the string
+ * Return: A reversed string
+ */
+
+int _str_rev(char *s, int len)
 {
-	int len = 0, *l_ptr;
-	l_ptr = &len;
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (l_ptr);
+	if (len <= 1)
+		return (1);
+	else if (*s == *(s + len - 1))
+		return (_str_rev(s++, len - 2));
+	return (0);
+}
+
+/**
+ * _len - calculates the length of a string
+ * @s: the string to calculate the length
+ * Return: the length of the string
+ */
+
+int _len(char *s)
+{
+	if (!*s)
+		return (0);
+	return (_len(s + 1) + 1);
 }
