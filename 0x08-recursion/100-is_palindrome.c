@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 
 	if (len <= 1)
 		return (1);
-	return (_str_len(s, len));
+	return (_str_rev(s, len));
 }
 
 /**
