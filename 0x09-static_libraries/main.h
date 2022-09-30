@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -18,6 +20,13 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+/**
+ * straccept - checks if a character is in a string
+ * @c: character to find
+ * @accept: string to transverse
+ * Return: 1 if character is found and 0 if not
+ */
+
 int straccept(char c, char *accept)
 {
 	int i;
@@ -26,6 +35,7 @@ int straccept(char c, char *accept)
 	{
 	if (c == accept[i])
 		return (1);
-	} 
+	}
 	return (0);
 }
+#endif
