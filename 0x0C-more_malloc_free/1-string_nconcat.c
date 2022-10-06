@@ -6,6 +6,7 @@
  * string_nconcat - concatenates s1 with s2 for a number of n bytes
  * @s1: string to append
  * @s2: string to concatenate with
+ * @n: number of bytes to copy
  * Return: address of the concatenated string
  */
 
@@ -26,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = s2_len;
 
 	str = malloc(s1_len);
-	
+
 	if (str == NULL)
 		return (NULL);
 
@@ -34,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (str == NULL)
 		return (NULL);
-	
+
 	str = str + s1_len;
 
 	for (i = 0; i < n; i++)
