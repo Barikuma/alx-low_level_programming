@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 
+int _strlen(char *s);
+
 /**
  * string_nconcat - concatenates s1 with s2 for a number of n bytes
  * @s1: string to append
@@ -41,4 +43,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str[t_len] = '\0';
 
 	return (str);
+}
+
+/**
+ * _strlen - calculates the length of a string
+ * @s: the string to count
+ * Return: the length
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*(s++) != '\0')
+		len++;
+	return (len);
 }
