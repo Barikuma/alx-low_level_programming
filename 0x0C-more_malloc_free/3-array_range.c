@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * arrange_range - creates an array of integers and initialize from min to max
+ * array_range - creates an array of integers and initialize from min to max
  * @min: number to start from
  * @max: number to end at
  * Return: pointer to the newly created array
@@ -12,7 +12,7 @@
 int *array_range(int min, int max)
 {
 	int *ptr, diff, i;
-	
+
 	if (min > max)
 		return (NULL);
 
@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 	if (ptr == NULL)
 		return (NULL);
 
-	for ( i = 0; min <= max; i++)
+	for (i = 0; min <= max; i++)
 	{
 		*(ptr + i) = min++;
 	}
