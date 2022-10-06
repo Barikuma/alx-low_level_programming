@@ -20,9 +20,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (i = 0; i < nmemb; i++)
 	{
-		ptr++ = (int *) malloc(size);
+		ptr = (int *) malloc(size);
 		if (ptr == NULL)
 			return (NULL);
+		ptr++;
 	}
 	for (i = 0; i < nmemb; i++)
 		*ptr++ = 0;
