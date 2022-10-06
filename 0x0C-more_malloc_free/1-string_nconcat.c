@@ -9,7 +9,28 @@
  * @n: number of bytes to copy
  * Return: address of the concatenated string
  */
+int _strlen(char *s)
+{
+	int len = 0;
 
+	while (*(s++) != '\0')
+		len++;
+	return (len);
+}
+
+void _realloc(void *ptr, unsigned int n)
+{
+	int i;
+	char *str = malloc(n);
+
+	for (i = 0; ptr[i] != '\0'; i++)
+	{
+		*str = ptr[i];
+		str++;
+	}
+
+	return (str);
+}
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int s1_len, s2_len, i;
@@ -31,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (str == NULL)
 		return (NULL);
 
-	str = realloc(str, (s1_len + n));
+	str = _realloc(str, (s1_len + n));
 
 	if (str == NULL)
 		return (NULL);
