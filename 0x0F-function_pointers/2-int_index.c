@@ -30,7 +30,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (i);
 		}
 	}
-	if (i = size)
+	if (i == size)
 		return (-1);
 
 	return (-1);
