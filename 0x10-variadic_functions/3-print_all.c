@@ -16,17 +16,20 @@ int _strlen(const char * const s);
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char f_char[4] = {'c', 'f', 'i', 's'};
-	int i = 0, d, j, len = _strlen(format);
+	int i = 0, d, len = _strlen(format);
 	char ch, *str;
 	double f;
 
 	va_start(args, format);
 
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+
 	while (i < len)
 	{
-		j = 0;
-
 		switch (format[i])
 		{
 			case 'c':
@@ -53,15 +56,9 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
-		while (j < len)
-		{
-			if (format[i] == f_char[j] && i < (len - 1))
-			{
-				printf(", ");
-				break;
-			}
-			j++;
-		}
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+					format[i] == 's') && format[(i + 1)] != '\0')
+			printf(", ");
 		i++;
 	}
 	va_end(args);
