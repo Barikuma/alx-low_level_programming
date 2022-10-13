@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <stddef.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
-
-int _strlen(const char * const s);
 
 /**
  * print_all - prints all function arguments according to its format
@@ -16,9 +14,9 @@ int _strlen(const char * const s);
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, d, len = _strlen(format);
+	int i = 0, d;
 	char ch, *str;
-	double f;
+	float f;
 
 	va_start(args, format);
 
@@ -28,7 +26,7 @@ void print_all(const char * const format, ...)
 		return;
 	}
 
-	while (i < len)
+	while (format[i])
 	{
 		switch (format[i])
 		{
@@ -65,17 +63,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
-/**
- * _strlen - calculates the length of a string
- * @s: string to count
- * Return: string length
- */
-
-int _strlen(const char * const s)
-{
-	int len = 0;
-
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
