@@ -5,42 +5,33 @@
 
 /**
  * print_all - prints all function arguments according to its format
- * @format: the format in which an argumennt should be printed
- * s for string, i for intger, f for float, c for char
- *
+ * @format: type of function arguments
  * Return: void
  */
-
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, d;
-	char ch, *str;
-	float f;
+	int i = 0;
+	char *str;
 
 	va_start(args, format);
-
 	while (format == NULL)
 	{
 		printf("\n");
 		return;
 	}
-
 	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				ch = va_arg(args, int);
-				printf("%c", ch);
+				printf("%c", (char)va_arg(args, int));
 				break;
 			case 'i':
-				d = va_arg(args, int);
-				printf("%d", d);
+				printf("%d", va_arg(args, int));
 				break;
 			case 'f':
-				f = va_arg(args, double);
-				printf("%f", f);
+				printf("%f", (float)va_arg(args, double));
 				break;
 			case 's':
 				str = va_arg(args, char*);
@@ -50,10 +41,8 @@ void print_all(const char * const format, ...)
 					break;
 				}
 					printf("%s", str);
-			default:
-				break;
+					break;
 		}
-
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
 					format[i] == 's') && format[(i + 1)] != '\0')
 			printf(", ");
@@ -62,4 +51,3 @@ void print_all(const char * const format, ...)
 	va_end(args);
 	printf("\n");
 }
-
