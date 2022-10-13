@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	char f_char[4] = {'c', 'f', 'i', 's'};
 	int i = 0, d, j, len = _strlen(format);
-	char ch, *str, *sep = ", ";
+	char ch, *str;
 	double f;
 
 	va_start(args, format);
@@ -55,7 +55,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == f_char[j] && i < (len - 1))
 			{
-				printf("%s", sep);
+				printf(", ");
 				break;
 			}
 			j++;
