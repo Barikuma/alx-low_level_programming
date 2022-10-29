@@ -1,42 +1,37 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_binary - prints the binary equivalent of a decimal number
- * @n: number to convert
- * Return: void
+ * print_binary - Print out the binary representation of an unsigned long int
+ * @n: The unsigned long int to print in binary
  */
-
 void print_binary(unsigned long int n)
 {
-	print(n);
-}
+	unsigned long int revnum;
+	unsigned long int count;
 
-/**
- * print - converts and prints the binary equivalent of a number
- * @n: number to convert
- * Return: void
- */
-
-void print(unsigned long int n)
-{
-	int arr[100], i = 0;
-	
+	revnum = count = 0;
 	if (n == 0)
-	{
-		_putchar('0' + n);
-		return;
-	}
+		_putchar('0');
 	while (n > 0)
 	{
-		arr[i] = n % 2;
-		n /= 2;
-		i++;
+		revnum = revnum << 1;
+		revnum += n & 1;
+		count++;
+		n = n >> 1;
 	}
-	i--;
-	
-	while (i >= 0)
+	while (revnum > 0)
 	{
-		_putchar('0' + arr[i]);
-		i--;
+		_putchar((revnum & 1) + '0');
+		revnum = revnum >> 1;
+		count--;
+	}
+	if (count > 0)
+	{
+		while (count != 0)
+		{
+			_putchar('0');
+			count--;
+		}
 	}
 }
