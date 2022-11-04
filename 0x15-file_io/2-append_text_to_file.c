@@ -11,10 +11,11 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int f_open, f_close, len = 0;
 
-	if (filename == NULL) return (-1);
+	if (filename == NULL)
+		return (-1);
 
 	f_open = open(filename, O_WRONLY | O_APPEND);
-	
+
 	if (f_open == -1)
 		return (f_open);
 
@@ -27,7 +28,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 
 	f_close = close(f_open);
-	
-	if (f_close == -1) return (f_close);
+
+	if (f_close == -1)
+		return (f_close);
 	return (1);
 }
